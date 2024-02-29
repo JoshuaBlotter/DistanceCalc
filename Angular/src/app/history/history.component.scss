@@ -1,0 +1,11 @@
+#topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    #left {
+        justify-content: left;
+    }
+    #right {
+        justify-content: right;
+    }
+}

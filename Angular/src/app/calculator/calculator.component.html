@@ -5,35 +5,37 @@
             <p>Prototype web application for calculating the distance between addresses.</p>
         </div>
         <div id="right">
-            <button mat-button color="primary" (click)="navigate()">View Historical Queries <span class="material-icons-outlined">history</span></button>
+            <button mat-raised-button color="primary" (click)="navigate()">View Historical Queries <span class="material-icons-outlined">history</span></button>
         </div>
     </div>
 
-    <div id="start">
-      <mat-form-field>
-        <mat-label>Input</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
-    <div id="end">
-      <mat-form-field>
-        <mat-label>Input</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
-    <div>
-      Unit
-      <label id="example-radio-group-label">Unit</label>
-      <mat-radio-group
-        aria-labelledby="example-radio-group-label"g 
+    <div id="calulator">
+
+      <div id="start">
+        <mat-form-field>
+          <mat-label>Input</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div id="end">
+        <mat-form-field>
+          <mat-label>Input</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div id="units">
+        <label id="radio-group-label">Unit</label>
+        <mat-radio-group
+        aria-labelledby="radio-group-label" 
         class="radio-group"
-        [(ngModel)]="chosenMetric">
+        >
         @for (metric of metrics; track metric) {
-          <mat-radio-button class="example-radio-button" [value]="metric">{{metric}}</mat-radio-button>
+          <mat-radio-button class="radio-button" [value]="metric">{{metric}}</mat-radio-button>
         }
       </mat-radio-group>
     </div>
     <div>Distance</div>
-
-    <button mat-button color="primary">Calculate Distance <span class="material-icons-outlined">calculate</span></button>
+    
+  </div>
+    <button mat-raised-button color="primary">Calculate Distance <span class="material-icons-outlined">calculate</span></button>
   </div>
